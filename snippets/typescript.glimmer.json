@@ -1,6 +1,6 @@
 {
-  "class": {
-    "prefix": "class",
+  "class Component": {
+    "prefix": ["class", "Component"],
     "body": [
       "class ${1} extends Component<{",
       "  Element: null;",
@@ -16,10 +16,9 @@
       "}"
     ]
   },
-  "@tracked": { "prefix": "@tracked", "body": "@tracked ${0};" },
-  "temp": { "prefix": "temp", "body": ["<template>", "  ${0}", "</template>"] },
-  "const": {
-    "prefix": "const",
+  "@tracked property": { "prefix": "@tracked", "body": "@tracked ${0};" },
+  "const <template>": {
+    "prefix": ["const", "temp", "<template>"],
     "body": [
       "const ${0} = ",
       "  <template>",
@@ -29,12 +28,25 @@
       "  }>"
     ]
   },
-  "<temp": {
-    "prefix": "<temp",
+  "<template>": {
+    "prefix": ["temp", "<template>"],
     "body": ["<template>", "  ${0}", "</template>"]
   },
-  "@service": { "prefix": "@service", "body": "@service declare ${1}: ${0};" },
-  "TOC": {
+  "@service injection": { "prefix": "@service", "body": "@service declare ${1}: ${0};" },
+  "Signature type": {
+    "prefix": ["interface", "Signature"],
+    "body": [
+      "interface Signature {",
+      "  Element: null;",
+      "  Args: {",
+      "  };",
+      "  Blocks: {",
+      "    // default: []",
+      "  };",
+      "}"
+    ]
+  },
+  "TOC type": {
     "prefix": "TOC",
     "body": [
       "TOC<{",
@@ -46,9 +58,5 @@
       "  };",
       "}>"
     ]
-  },
-  "<template>": {
-    "prefix": "<template>",
-    "body": ["<template>", "  ${0}", "</template>"]
   }
 }
