@@ -70,7 +70,11 @@
       "}>"
     ]
   },
-  "Test": {
+  "QUnit Module": {
+    "prefix": ["module"],
+    "body": ["module('${1}', function (hooks) {", "  ${2}", "});"]
+  },
+  "QUnit Test": {
     "prefix": ["test"],
     "body": ["test('${1}', async function (assert) {", "  ${2}", "});"]
   },
