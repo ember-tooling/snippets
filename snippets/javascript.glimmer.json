@@ -26,6 +26,22 @@
     "body": ["<template>", "  ${0}", "</template>"]
   },
   "@service injection": { "prefix": "@service", "body": "@service ${1};" },
+  "Unit Test": {
+    "isFileTemplate": true,
+    "prefix": ["Unit Test", "test"],
+    "body": [
+      "import { module, test } from 'qunit';",
+      "import { setupTest } from 'ember-qunit';",
+      "",
+      "module('Unit | ${1}', function (hooks) {",
+      "  setupTest(hooks);"
+      "",
+      "  test('${2}', async function (assert) {",
+      "    assert.ok('true', 'we did it');",
+      "  });",
+      "});"
+    ]
+  }
   "Rendering Test": {
     "isFileTemplate": true,
     "prefix": ["Rendering Test", "test"],
