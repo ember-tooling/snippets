@@ -2,6 +2,8 @@
   "class Component": {
     "prefix": ["class", "Component"],
     "body": [
+      "import Component from '@glimmer/component';",
+      "",
       "class ${1} extends Component<{",
       "  Element: null;",
       "  Args: {",
@@ -20,6 +22,8 @@
   "const <template>": {
     "prefix": ["const", "temp", "<template>"],
     "body": [
+      "import type { TOC } from '@ember/component/template-only';",
+      "",
       "const ${0} = ",
       "  <template>",
       "    ${1}",

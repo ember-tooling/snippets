@@ -2,6 +2,8 @@
   "class Component": {
     "prefix": ["class", "Component"],
     "body": [
+      "import Component from '@glimmer/component';",
+      "",
       "class ${1} extends Component {",
       "  <template>",
       "    ${0}",
