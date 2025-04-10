@@ -58,5 +58,28 @@
       "  };",
       "}>"
     ]
+  },
+  "Rendering Test": {
+    "isFileTemplate": true,
+    "prefix": ["Rendering Test", "test"],
+    "body": [
+      "import { module, test } from 'qunit';",
+      "import { setupRenderingTest } from 'ember-qunit';",
+      "import { render } from '@ember/test-helpers';",
+      "",
+      "module('Rendering | ${1}', function (hooks) {",
+      "  setupRenderingTest(hooks);"
+      "",
+      "  test('${2}', async function (assert) {",
+      "    await render(",
+      "      <template>",
+      "        content to test here",
+      "      </template>",
+      "    );",
+      "",
+      "    assert.dom().hasText('content to test here');",
+      "  });",
+      "});"
+    ]
   }
 }
