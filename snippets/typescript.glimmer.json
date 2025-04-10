@@ -94,6 +94,16 @@
       "});"
     ]
   },
+  "await render": {
+    "prefix": ["await", "render", "await render"],
+    "body": [
+      "await render(",
+      "  <template>",
+      "    ${1}",
+      "  </template>",
+      ");",
+    ]
+  },
   "Rendering Test (file)": {
     "isFileTemplate": true,
     "prefix": ["Rendering Test", "test"],
