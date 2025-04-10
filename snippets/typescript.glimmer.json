@@ -70,14 +70,6 @@
       "}>"
     ]
   },
-  "QUnit Module": {
-    "prefix": ["module"],
-    "body": ["module('${1}', function (hooks) {", "  ${2}", "});"]
-  },
-  "QUnit Test": {
-    "prefix": ["test"],
-    "body": ["test('${1}', async function (assert) {", "  ${2}", "});"]
-  },
   "Unit Test (file)": {
     "isFileTemplate": true,
     "prefix": ["Unit Test", "test"],
@@ -96,13 +88,7 @@
   },
   "await render": {
     "prefix": ["await", "render", "await render"],
-    "body": [
-      "await render(",
-      "  <template>",
-      "    ${1}",
-      "  </template>",
-      ");",
-    ]
+    "body": ["await render(", "  <template>", "    ${1}", "  </template>", ");"]
   },
   "Rendering Test (file)": {
     "isFileTemplate": true,

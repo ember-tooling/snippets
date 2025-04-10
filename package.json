@@ -35,11 +35,26 @@
   "contributes": {
     "snippets": [
       {
-        "language": ["Glimmer JS", "javascript.glimmer"],
+        "language": [
+          "Glimmer JS",
+          "javascript.glimmer",
+          "Glimmer TS",
+          "typescript.glimmer"
+        ],
+        "path": "./snippets/all.json"
+      },
+      {
+        "language": [
+          "Glimmer JS",
+          "javascript.glimmer"
+        ],
         "path": "./snippets/javascript.glimmer.json"
       },
       {
-        "language": ["Glimmer TS", "typescript.glimmer"],
+        "language": [
+          "Glimmer TS",
+          "typescript.glimmer"
+        ],
         "path": "./snippets/typescript.glimmer.json"
       },
       {
