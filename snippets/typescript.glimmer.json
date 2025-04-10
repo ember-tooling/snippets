@@ -37,6 +37,10 @@
     "body": ["<template>", "  ${0}", "</template>"]
   },
   "@service injection": { "prefix": "@service", "body": "@service declare ${1}: ${0};" },
+  "@service router": { 
+    "prefix": ["@service", "router"], 
+    "body": "@service declare router: RouterService;" 
+  },
   "Signature type": {
     "prefix": ["interface", "Signature"],
     "body": [
@@ -110,7 +114,7 @@
       "});"
     ],
   },
-    "Application Test (file)": {
+  "Application Test (file)": {
     "isFileTemplate": true,
     "prefix": ["Application Test", "test"],
     "body": [
