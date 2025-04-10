@@ -17,6 +17,9 @@
   "categories": [
     "Snippets"
   ],
+  "engines": {
+    "vscode": ">= 1.0.0"
+  },
   "keywords": [
     "Ember",
     "TypeScript",
@@ -32,19 +35,11 @@
   "contributes": {
     "snippets": [
       {
-        "language": "Glimmer JS",
+        "language": ["Glimmer JS", "javascript.glimmer"],
         "path": "./snippets/javascript.glimmer.json"
       },
       {
-        "language": "Glimmer TS",
-        "path": "./snippets/typescript.glimmer.json"
-      },
-      {
-        "language": "javascript.glimmer",
-        "path": "./snippets/javascript.glimmer.json"
-      },
-      {
-        "language": "typescript.glimmer",
+        "language": ["Glimmer TS", "typescript.glimmer"],
         "path": "./snippets/typescript.glimmer.json"
       },
       {
