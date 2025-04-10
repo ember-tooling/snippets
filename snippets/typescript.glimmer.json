@@ -36,10 +36,13 @@
     "prefix": ["temp", "<template>"],
     "body": ["<template>", "  ${0}", "</template>"]
   },
-  "@service injection": { "prefix": "@service", "body": "@service declare ${1}: ${0};" },
-  "@service router": { 
-    "prefix": ["@service", "router"], 
-    "body": "@service declare router: RouterService;" 
+  "@service injection": {
+    "prefix": "@service",
+    "body": "@service declare ${1}: ${0};"
+  },
+  "@service router": {
+    "prefix": ["@service", "router"],
+    "body": "@service declare router: RouterService;"
   },
   "Signature type": {
     "prefix": ["interface", "Signature"],
@@ -69,11 +72,7 @@
   },
   "Test": {
     "prefix": ["test"],
-    "body": [
-      "test('${1}', async function (assert) {",
-      "  ${2}",
-      "});"
-    ]
+    "body": ["test('${1}', async function (assert) {", "  ${2}", "});"]
   },
   "Unit Test (file)": {
     "isFileTemplate": true,
@@ -83,7 +82,7 @@
       "import { setupTest } from 'ember-qunit';",
       "",
       "module('Unit | ${1}', function (hooks) {",
-      "  setupTest(hooks);"
+      "  setupTest(hooks);",
       "",
       "  test('${2}', async function (assert) {",
       "    assert.ok('true', 'we did it');",
@@ -100,7 +99,7 @@
       "import { render } from '@ember/test-helpers';",
       "",
       "module('Rendering | ${1}', function (hooks) {",
-      "  setupRenderingTest(hooks);"
+      "  setupRenderingTest(hooks);",
       "",
       "  test('${2}', async function (assert) {",
       "    await render(",
@@ -112,7 +111,7 @@
       "    assert.dom().hasText('content to test here');",
       "  });",
       "});"
-    ],
+    ]
   },
   "Application Test (file)": {
     "isFileTemplate": true,
@@ -123,7 +122,7 @@
       "import { visit } from '@ember/test-helpers';",
       "",
       "module('Application | ${1}', function (hooks) {",
-      "  setupApplicationTest(hooks);"
+      "  setupApplicationTest(hooks);",
       "",
       "  test('${2}', async function (assert) {",
       "    await visit('/some/location');",

@@ -14,12 +14,7 @@
   "@tracked property": { "prefix": "@tracked", "body": "@tracked ${0};" },
   "const <template>": {
     "prefix": ["const", "temp", "<template>"],
-    "body": [
-      "const ${0} = ",
-      "  <template>",
-      "    ${1}",
-      "  </template>"
-    ]
+    "body": ["const ${0} = ", "  <template>", "    ${1}", "  </template>"]
   },
   "<template>": {
     "prefix": ["temp", "<template>"],
@@ -28,11 +23,7 @@
   "@service injection": { "prefix": "@service", "body": "@service ${1};" },
   "Test": {
     "prefix": ["test"],
-    "body": [
-      "test('${1}', async function (assert) {",
-      "  ${2}",
-      "});"
-    ]
+    "body": ["test('${1}', async function (assert) {", "  ${2}", "});"]
   },
   "Unit Test (file)": {
     "isFileTemplate": true,
@@ -42,7 +33,7 @@
       "import { setupTest } from 'ember-qunit';",
       "",
       "module('Unit | ${1}', function (hooks) {",
-      "  setupTest(hooks);"
+      "  setupTest(hooks);",
       "",
       "  test('${2}', async function (assert) {",
       "    assert.ok('true', 'we did it');",
@@ -59,7 +50,7 @@
       "import { render } from '@ember/test-helpers';",
       "",
       "module('Rendering | ${1}', function (hooks) {",
-      "  setupRenderingTest(hooks);"
+      "  setupRenderingTest(hooks);",
       "",
       "  test('${2}', async function (assert) {",
       "    await render(",
@@ -82,7 +73,7 @@
       "import { visit } from '@ember/test-helpers';",
       "",
       "module('Application | ${1}', function (hooks) {",
-      "  setupApplicationTest(hooks);"
+      "  setupApplicationTest(hooks);",
       "",
       "  test('${2}', async function (assert) {",
       "    await visit('/some/location');",
