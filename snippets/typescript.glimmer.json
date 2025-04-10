@@ -63,6 +63,14 @@
       "}>"
     ]
   },
+  "Test": {
+    "prefix": ["test"],
+    "body": [
+      "test('${1}', async function (assert) {",
+      "  ${2}",
+      "});"
+    ]
+  },
   "Unit Test (file)": {
     "isFileTemplate": true,
     "prefix": ["Unit Test", "test"],
@@ -78,7 +86,7 @@
       "  });",
       "});"
     ]
-  }
+  },
   "Rendering Test (file)": {
     "isFileTemplate": true,
     "prefix": ["Rendering Test", "test"],
