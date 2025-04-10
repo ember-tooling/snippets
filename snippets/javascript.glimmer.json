@@ -1,0 +1,50 @@
+{
+  "class Component": {
+    "prefix": ["class", "Component"],
+    "body": [
+      "class ${1} extends Component {",
+      "  <template>",
+      "    ${0}",
+      "  </template>",
+      "}"
+    ]
+  },
+  "@tracked property": { "prefix": "@tracked", "body": "@tracked ${0};" },
+  "const <template>": {
+    "prefix": ["const", "temp", "<template>"],
+    "body": [
+      "const ${0} = ",
+      "  <template>",
+      "    ${1}",
+      "  </template>"
+    ]
+  },
+  "<template>": {
+    "prefix": ["temp", "<template>"],
+    "body": ["<template>", "  ${0}", "</template>"]
+  },
+  "@service injection": { "prefix": "@service", "body": "@service ${1};" },
+  "Rendering Test": {
+    "isFileTemplate": true,
+    "prefix": ["Rendering Test", "test"],
+    "body": [
+      "import { module, test } from 'qunit';",
+      "import { setupRenderingTest } from 'ember-qunit';",
+      "import { render } from '@ember/test-helpers';",
+      "",
+      "module('Rendering | ${1}', function (hooks) {",
+      "  setupRenderingTest(hooks);"
+      "",
+      "  test('${2}', async function (assert) {",
+      "    await render(",
+      "      <template>",
+      "        content to test here",
+      "      </template>",
+      "    );",
+      "",
+      "    assert.dom().hasText('content to test here');",
+      "  });",
+      "});"
+    ]
+  }
+}
