@@ -26,7 +26,7 @@
     "body": ["<template>", "  ${0}", "</template>"]
   },
   "@service injection": { "prefix": "@service", "body": "@service ${1};" },
-  "Unit Test": {
+  "Unit Test (file)": {
     "isFileTemplate": true,
     "prefix": ["Unit Test", "test"],
     "body": [
@@ -42,7 +42,7 @@
       "});"
     ]
   }
-  "Rendering Test": {
+  "Rendering Test (file)": {
     "isFileTemplate": true,
     "prefix": ["Rendering Test", "test"],
     "body": [

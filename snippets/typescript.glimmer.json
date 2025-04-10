@@ -63,7 +63,7 @@
       "}>"
     ]
   },
-  "Unit Test": {
+  "Unit Test (file)": {
     "isFileTemplate": true,
     "prefix": ["Unit Test", "test"],
     "body": [
@@ -79,7 +79,7 @@
       "});"
     ]
   }
-  "Rendering Test": {
+  "Rendering Test (file)": {
     "isFileTemplate": true,
     "prefix": ["Rendering Test", "test"],
     "body": [
