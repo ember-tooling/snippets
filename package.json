@@ -1,0 +1,78 @@
+{
+  "name": "ember-snippets",
+  "publisher": "ember-tooling",
+  "displayName": "Ember Polaris Snippets - gjs, gts, tests, services, etc",
+  "description": "Snippets for Ember projects for quickly generating boilerplate",
+  "icon": "images/tbd.png",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ember-tooling/snippets.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ember-tooling/snippets/issues"
+  },
+  "homepage": "https://github.com/ember-tooling/snippets#readme",
+  "version": "0.0.0",
+  "categories": [
+    "Snippets"
+  ],
+  "keywords": [
+    "Ember",
+    "TypeScript",
+    "JavaScript",
+    "Snippets",
+    "Polaris",
+    "Tests",
+    "Testing",
+    "Services",
+    "Boilerplate",
+    "HTML"
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "language": "Glimmer JS",
+        "path": "./snippets/javascript.glimmer.json"
+      },
+      {
+        "language": "Glimmer TS",
+        "path": "./snippets/typescript.glimmer.json"
+      },
+      {
+        "language": "javascript.glimmer",
+        "path": "./snippets/javascript.glimmer.json"
+      },
+      {
+        "language": "typescript.glimmer",
+        "path": "./snippets/typescript.glimmer.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/javascript.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/typescript.json"
+      }
+    ]
+  },
+  "scripts": {
+    "publish": "npm version patch; vsce publish",
+    "build": "npm run build_readme; npm run dups; npm run count; npm run countTS; npm run countHTML; npm run countJS; npm run countJson",
+    "build_readme": "cat src/README_top.md > README.md; npm run generate_readme_table; cat src/README_bottom.md >> README.md;",
+    "generate_readme_table": "cat src/snippets.json | grep 'prefix\\|description' | sed -e \"s/description//\" | sed -e \"s/prefix//\" | sed -e 's/    \"\": \"//' | sed -e 's/\",//' | sed -e 'N;s/\\n/ | /' | sed -e 's/$/ |/g' | sed -e 's/^/| /' | sort  >> README.md",
+    "dup_snippet": "cat src/snippets.json | grep '\": {' | sort | uniq -d",
+    "dup_name": "cat src/snippets.json | grep 'prefix' | sort | uniq -d",
+    "dups": "npm run dup_snippet; npm run dup_name",
+    "count": "cat src/snippets.json | grep 'prefix' | wc -l",
+    "countTS": "cat snippets/typescript.json | grep 'prefix' | wc",
+    "countHTML": "cat snippets/html.json | grep 'prefix' | wc",
+    "countJS": "cat snippets/javascript.json | grep 'prefix' | wc",
+    "countJson": "cat snippets/json.json | grep 'prefix' | wc",
+    "patch": "npm version patch"
+  },
+  "devDependencies": {
+    "prettier": "^3.5.3"
+  }
+}
