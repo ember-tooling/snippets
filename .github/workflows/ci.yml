@@ -25,7 +25,7 @@ jobs:
 
   package:
     name: Package
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
@@ -34,23 +34,14 @@ jobs:
       - name: fetch all history and tags from all branches for gitversion
         run: git fetch --prune --unshallow
 
-      - name: DotNet Core SDK 3.1.0
-        uses: actions/setup-dotnet@v1
-        with:
-          dotnet-version: 3.1.x
+      - uses: actions/setup-dotnet@v4
 
       - name: install gitversion tool
-        uses: gittools/actions/gitversion/setup@v0.9
-        with:
-          versionSpec: '5.5.x'
-        env:
-          ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
+        uses: gittools/actions/gitversion/setup@v3.2.0
 
       - name: execute gitversion
         id: gitversion # step id used as reference for output values
-        uses: gittools/actions/gitversion/execute@v0.9.7
-        env:
-          ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
+        uses: gittools/actions/gitversion/execute@v3.2.0
 
       - name: print gitversion
         run: |
@@ -80,8 +71,8 @@ jobs:
       - name: upload vsix as artifact
         uses: actions/upload-artifact@v4
         with:
-          name: vscode-ember-${{steps.gitversion.outputs.majorMinorPatch}}.vsix
-          path: ${{github.workspace}}/vscode-ember-${{steps.gitversion.outputs.majorMinorPatch}}.vsix
+          name: emberjs-snippets-${{steps.gitversion.outputs.majorMinorPatch}}.vsix
+          path: ${{github.workspace}}/emberjs-snippets-${{steps.gitversion.outputs.majorMinorPatch}}.vsix
 
       - name: create a release
         if: github.ref == 'refs/heads/main'
