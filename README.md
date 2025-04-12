@@ -8,10 +8,10 @@ Preconfigured snippets for ember projects following Polaris Patterns.
 
 ## Installation
 
-VSCode: https://marketplace.visualstudio.com/items?itemName=EmberTooling.emberjs-snippets
-Open VSX: https://open-vsx.org/extension/embertooling/emberjs-snippets
-(neo)vim:
-- packer.nvim: `use { "ember-tooling/snippets" }`
+- VSCode: https://marketplace.visualstudio.com/items?itemName=EmberTooling.emberjs-snippets
+- Open VSX: https://open-vsx.org/extension/embertooling/emberjs-snippets
+- (neo)vim:
+    - packer.nvim: `use { "ember-tooling/snippets" }`
 
 
 ## Important
