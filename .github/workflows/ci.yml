@@ -96,13 +96,13 @@ jobs:
       - name: publish to marketplace VSCODE
         if: github.ref == 'refs/heads/main'
         env:
-          VSCODE_STORE_TOKEN: ${{ secrets.VSCODE_STORE_TOKEN }}
+          VSCODE_TOKEN: ${{ secrets.VSCODE_TOKEN }}
         run: pnpm vs:publish:ci
         continue-on-error: true
 
       - name: publish to marketplace OPEN VSX
         if: github.ref == 'refs/heads/main'
         env:
-          OPEN_VSX_STORE_TOKEN: ${{ secrets.OPEN_VSX_STORE_TOKEN }}
+          OPENVSX_TOKEN: ${{ secrets.OPENVSX_TOKEN }}
         run: pnpm ov:publish:ci
         continue-on-error: true
