@@ -1,0 +1,10 @@
+{
+  "await render": {
+    "prefix": ["render", "await render"],
+    "body": ["await render(", "  <template>", "    ${1}", "  </template>", ");"]
+  },
+  "<template>": {
+    "prefix": ["temp", "<template>"],
+    "body": ["<template>", "  ${0}", "</template>"]
+  }
+}

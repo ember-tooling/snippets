@@ -3,7 +3,7 @@
   "publisher": "ember-tooling",
   "displayName": "Ember Polaris Snippets - gjs, gts, tests, services, etc",
   "description": "Snippets for Ember projects for quickly generating boilerplate",
-  "icon": "images/tbd.png",
+  "icon": "images/ember-e-circle-icon-4c.svg",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -39,9 +39,20 @@
           "Glimmer JS",
           "javascript.glimmer",
           "Glimmer TS",
-          "typescript.glimmer"
+          "typescript.glimmer",
+          "javascript",
+          "typescript"
         ],
         "path": "./snippets/all.json"
+      },
+      {
+        "language": [
+          "Glimmer JS",
+          "javascript.glimmer",
+          "Glimmer TS",
+          "typescript.glimmer"
+        ],
+        "path": "./snippets/all-template-tag.json"
       },
       {
         "language": [
@@ -69,19 +80,7 @@
   },
   "scripts": {
     "lint:fix": "prettier . --write",
-    "publish": "npm version patch; vsce publish",
-    "build": "npm run build_readme; npm run dups; npm run count; npm run countTS; npm run countHTML; npm run countJS; npm run countJson",
-    "build_readme": "cat src/README_top.md > README.md; npm run generate_readme_table; cat src/README_bottom.md >> README.md;",
-    "generate_readme_table": "cat src/snippets.json | grep 'prefix\\|description' | sed -e \"s/description//\" | sed -e \"s/prefix//\" | sed -e 's/    \"\": \"//' | sed -e 's/\",//' | sed -e 'N;s/\\n/ | /' | sed -e 's/$/ |/g' | sed -e 's/^/| /' | sort  >> README.md",
-    "dup_snippet": "cat src/snippets.json | grep '\": {' | sort | uniq -d",
-    "dup_name": "cat src/snippets.json | grep 'prefix' | sort | uniq -d",
-    "dups": "npm run dup_snippet; npm run dup_name",
-    "count": "cat src/snippets.json | grep 'prefix' | wc -l",
-    "countTS": "cat snippets/typescript.json | grep 'prefix' | wc",
-    "countHTML": "cat snippets/html.json | grep 'prefix' | wc",
-    "countJS": "cat snippets/javascript.json | grep 'prefix' | wc",
-    "countJson": "cat snippets/json.json | grep 'prefix' | wc",
-    "patch": "npm version patch"
+    "publish": "npm version patch; vsce publish"
   },
   "devDependencies": {
     "prettier": "^3.5.3"

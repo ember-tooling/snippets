@@ -1,7 +1,7 @@
 {
   "Unit Test (file)": {
     "isFileTemplate": true,
-    "prefix": ["Unit Test", "test"],
+    "prefix": ["g-unit-test", "Unit Test", "test"],
     "body": [
       "import { module, test } from 'qunit';",
       "import { setupTest } from 'ember-qunit';",
@@ -17,7 +17,7 @@
   },
   "Application Test (file)": {
     "isFileTemplate": true,
-    "prefix": ["Application Test", "test"],
+    "prefix": ["g-application-test", "Application Test", "test"],
     "body": [
       "import { module, test } from 'qunit';",
       "import { setupApplicationTest } from 'ember-qunit';",

@@ -1,4 +1,51 @@
 {
+  "class Component (file)": {
+    "prefix": ["g-class-component", "g-component", "class"],
+    "body": [
+      "import Component from '@glimmer/component';",
+      "",
+      "export class ${1} extends Component<{",
+      "  Element: null;",
+      "  Args: {",
+      "    // foo: number",
+      "  };",
+      "  Blocks: {",
+      "    // default: []",
+      "  }",
+      "}> {",
+      "  <template>",
+      "    ${0}",
+      "  </template>",
+      "}"
+    ]
+  },
+
+  "template-only component (file)": {
+    "prefix": ["g-component", "const", "temp", "<template>"],
+    "body": [
+      "import type { TOC } from '@ember/component/template-only';",
+      "",
+      "export const ${0} = ",
+      "  <template>",
+      "    ${1}",
+      "  </template> satisfies TOC<{",
+      "    ${2}",
+      "  }>"
+    ]
+  },
+  "route template(file)": {
+    "prefix": ["g-template", "const", "temp", "<template>"],
+    "body": [
+      "import type { TOC } from '@ember/component/template-only';",
+      "",
+      "export default ",
+      "  <template>",
+      "    ${1}",
+      "  </template> satisfies TOC<{",
+      "    ${2}",
+      "  }>"
+    ]
+  },
   "class Component": {
     "prefix": ["class", "Component"],
     "body": [
@@ -32,10 +79,6 @@
       "  }>"
     ]
   },
-  "<template>": {
-    "prefix": ["temp", "<template>"],
-    "body": ["<template>", "  ${0}", "</template>"]
-  },
   "@service injection": {
     "prefix": "@service",
     "body": "@service declare ${1}: ${0};"
@@ -50,6 +93,7 @@
       "interface Signature {",
       "  Element: null;",
       "  Args: {",
+      "    // foo: number",
       "  };",
       "  Blocks: {",
       "    // default: []",
@@ -63,6 +107,7 @@
       "TOC<{",
       "  Element: null;",
       "  Args: {",
+      "    // foo: number",
       "  };",
       "  Blocks: {",
       "    // default: []",
@@ -70,29 +115,21 @@
       "}>"
     ]
   },
-  "Unit Test (file)": {
-    "isFileTemplate": true,
-    "prefix": ["Unit Test", "test"],
+  "Signature content": {
+    "prefix": ["Args", "signature-content"],
     "body": [
-      "import { module, test } from 'qunit';",
-      "import { setupTest } from 'ember-qunit';",
-      "",
-      "module('Unit | ${1}', function (hooks) {",
-      "  setupTest(hooks);",
-      "",
-      "  test('${2}', async function (assert) {",
-      "    assert.ok('true', 'we did it');",
-      "  });",
-      "});"
+      "Element: null;",
+      "Args: {",
+      "  // foo: number",
+      "}",
+      "Blocks: {",
+      "  // default: []",
+      "}"
     ]
-  },
-  "await render": {
-    "prefix": ["await", "render", "await render"],
-    "body": ["await render(", "  <template>", "    ${1}", "  </template>", ");"]
   },
   "Rendering Test (file)": {
     "isFileTemplate": true,
-    "prefix": ["Rendering Test", "test"],
+    "prefix": ["g-rendering-test", "Rendering Test", "test"],
     "body": [
       "import { module, test } from 'qunit';",
       "import { setupRenderingTest } from 'ember-qunit';",
@@ -114,25 +151,6 @@
       "        content to test {{state.where}}",
       "      </template>",
       "    );",
-      "",
-      "    assert.dom().hasText('content to test here');",
-      "  });",
-      "});"
-    ]
-  },
-  "Application Test (file)": {
-    "isFileTemplate": true,
-    "prefix": ["Application Test", "test"],
-    "body": [
-      "import { module, test } from 'qunit';",
-      "import { setupApplicationTest } from 'ember-qunit';",
-      "import { visit } from '@ember/test-helpers';",
-      "",
-      "module('Application | ${1}', function (hooks) {",
-      "  setupApplicationTest(hooks);",
-      "",
-      "  test('${2}', async function (assert) {",
-      "    await visit('/some/location');",
       "",
       "    assert.dom().hasText('content to test here');",
       "  });",
