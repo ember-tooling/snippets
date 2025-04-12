@@ -1,6 +1,6 @@
 {
   "name": "ember-snippets",
-  "publisher": "ember-tooling",
+  "publisher": "EmberTooling",
   "displayName": "Ember Polaris Snippets - gjs, gts, tests, services, etc",
   "description": "Snippets for Ember projects for quickly generating boilerplate",
   "icon": "images/ember-e-circle-icon-4c.png",
