@@ -21,7 +21,7 @@ For example,
 - `await render` will have a suggestion for the rendering tests' render boilerplate
 - etc
 
-Whole file generating boilerplate, such as for tests are prefixed with `g-` for generate, similar to the ember-cil command's you'd use in the terminal to generate the same file contents.
+Whole file generating boilerplate, such as for tests are prefixed with `g-` for generate, similar to the ember-cli command's you'd use in the terminal to generate the same file contents.
 
 - `g-rendering-test`, `g-application-test`, `g-unit-test`
 - `g-class-component`, `g-component`
