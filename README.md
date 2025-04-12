@@ -6,12 +6,12 @@
 
 Preconfigured snippets for ember projects following Polaris Patterns.
 
-# Important
+## Important
 
 This extension is optimized for developers that use Ember Polaris patterns and features, which are supported back to ember-source 3.28.
 If you need Ember Octane (and earlier) snippets, this snippet pack is not for you.
 
-# Usage
+## Usage
 
 Many snippets will show up in auto-completion prompts as you're typing.
 For example,
@@ -29,3 +29,12 @@ Whole file generating boilerplate, such as for tests are prefixed with `g-` for 
 - `g-route-template`
 - `g-service`
 - etc
+
+
+## Debugging
+
+- clone the repo
+- cd to the cloned repo
+- `pnpm i`
+- `pnpm build`
+- if using vscode, on the extensions panel, click "Install from VSIX" and select the vsix file generated from `pnpm build`

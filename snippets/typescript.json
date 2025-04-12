@@ -10,7 +10,7 @@
       "  // FIXME: Add params",
       "}",
       "",
-      "export default class ${0} extends Router {",
+      "export default class ${0} extends Route {",
       "  queryParams = {",
       "    // foo: { refreshModel: true } ",
       "  }",
@@ -34,7 +34,7 @@
       "  // FIXME: Add params",
       "}",
       "",
-      "export default class ${0} extends Router {",
+      "export default class ${0} extends Route {",
       "  @service declare router: RouterService;",
       "",
       "  queryParams = {",
@@ -49,7 +49,7 @@
   },
   "Service (file)": {
     "isFileTemplate": true,
-    "prefix": ["g-route"],
+    "prefix": ["g-service"],
     "body": [
       "import Service from '@ember/service';",
       "",

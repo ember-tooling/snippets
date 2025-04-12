@@ -5,7 +5,7 @@
     "body": [
       "import Route from '@ember/routing/route';",
       "",
-      "export default class ${0} extends Router {",
+      "export default class ${0} extends Route {",
       "  queryParams = {",
       "    // foo: { refreshModel: true } ",
       "  }",
@@ -23,7 +23,7 @@
       "import Route from '@ember/routing/route';",
       "import { service } from '@ember/service';",
       "",
-      "export default class ${0} extends Router {",
+      "export default class ${0} extends Route {",
       "  @service router;",
       "",
       "  queryParams = {",
@@ -38,7 +38,7 @@
   },
   "Service (file)": {
     "isFileTemplate": true,
-    "prefix": ["g-route"],
+    "prefix": ["g-service"],
     "body": [
       "import Service from '@ember/service';",
       "",

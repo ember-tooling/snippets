@@ -3,7 +3,7 @@
   "publisher": "ember-tooling",
   "displayName": "Ember Polaris Snippets - gjs, gts, tests, services, etc",
   "description": "Snippets for Ember projects for quickly generating boilerplate",
-  "icon": "images/ember-e-circle-icon-4c.svg",
+  "icon": "images/ember-e-circle-icon-4c.png",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -18,7 +18,7 @@
     "Snippets"
   ],
   "engines": {
-    "vscode": ">= 1.0.0"
+    "vscode": ">=1.0.0"
   },
   "keywords": [
     "Ember",
@@ -80,6 +80,7 @@
   },
   "scripts": {
     "lint:fix": "prettier . --write",
+    "build": "vsce pack",
     "publish": "npm version patch; vsce publish"
   },
   "devDependencies": {
