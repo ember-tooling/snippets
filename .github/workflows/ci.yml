@@ -71,8 +71,8 @@ jobs:
       - name: upload vsix as artifact
         uses: actions/upload-artifact@v4
         with:
-          name: ember-snippets-${{steps.gitversion.outputs.majorMinorPatch}}.vsix
-          path: ${{github.workspace}}/ember-snippets-${{steps.gitversion.outputs.majorMinorPatch}}.vsix
+          name: emberjs-snippets-${{steps.gitversion.outputs.majorMinorPatch}}.vsix
+          path: ${{github.workspace}}/emberjs-snippets-${{steps.gitversion.outputs.majorMinorPatch}}.vsix
 
       - name: create a release
         if: github.ref == 'refs/heads/main'
