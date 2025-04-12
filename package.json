@@ -83,6 +83,7 @@
     "publish": "npm version patch; vsce publish"
   },
   "devDependencies": {
+    "@vscode/vsce": "^3.3.2",
     "prettier": "^3.5.3"
   }
 }
