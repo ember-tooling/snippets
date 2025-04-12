@@ -1,6 +1,6 @@
-[![Installs](https://vsmarketplacebadges.dev/installs-short/ember-tooling.snippets.svg)](https://marketplace.visualstudio.com/items?itemName=ember-tooling.snippets)
-![Downloads](https://vsmarketplacebadges.dev/downloads-short/ember-tooling.snippets.svg)
-![Rating](https://vsmarketplacebadges.dev/rating-star/ember-tooling.snippets.svg)
+[![Installs](https://vsmarketplacebadges.dev/installs-short/EmberTooling.emberjs-snippets.svg)](https://marketplace.visualstudio.com/items?itemName=EmberTooling.emberjs-snippets)
+![Downloads](https://vsmarketplacebadges.dev/downloads-short/EmberTooling.emberjs-snippets.svg)
+![Rating](https://vsmarketplacebadges.dev/rating-star/EmberTooling.emberjs-snippets.svg)
 
 # Snippets for GJS and GTS in VSCode and (neo)vim
 
