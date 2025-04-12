@@ -39,7 +39,7 @@ jobs:
           dotnet-version: 3.1.x
 
       - name: install gitversion tool
-        uses: gittools/actions/gitversion/setup@v3.2.x
+        uses: gittools/actions/gitversion/setup@v3.2.0
         with:
           versionSpec: '5.5.x'
         env:
@@ -47,7 +47,7 @@ jobs:
 
       - name: execute gitversion
         id: gitversion # step id used as reference for output values
-        uses: gittools/actions/gitversion/execute@v3.2.x
+        uses: gittools/actions/gitversion/execute@v3.2.0
         env:
           ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
 
