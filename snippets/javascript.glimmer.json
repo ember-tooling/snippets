@@ -1,0 +1,79 @@
+{
+  "class Component (file)": {
+    "isFileTemplate": true,
+    "prefix": ["g-class-component", "g-component", "class"],
+    "body": [
+      "import Component from '@glimmer/component';",
+      "",
+      "export class ${1} extends Component {",
+      "  <template>",
+      "    ${0}",
+      "  </template>",
+      "}"
+    ]
+  },
+
+  "template-only component (file)": {
+    "isFileTemplate": true,
+    "prefix": ["g-component", "const", "temp", "<template>"],
+    "body": [
+      "export const ${0} = ",
+      "  <template>",
+      "    ${1}",
+      "  </template>;"
+    ]
+  },
+  "route template(file)": {
+    "isFileTemplate": true,
+    "prefix": ["g-template", "const", "temp", "<template>"],
+    "body": ["export default ", "  <template>", "    ${1}", "  </template>"]
+  },
+  "class Component": {
+    "prefix": ["class", "Component"],
+    "body": [
+      "import Component from '@glimmer/component';",
+      "",
+      "class ${1} extends Component {",
+      "  <template>",
+      "    ${0}",
+      "  </template>",
+      "}"
+    ]
+  },
+  "@tracked property": { "prefix": "@tracked", "body": "@tracked ${0};" },
+  "const <template>": {
+    "prefix": ["const", "temp", "<template>"],
+    "body": ["const ${0} = ", "  <template>", "    ${1}", "  </template>"]
+  },
+  "@service injection": { "prefix": "@service", "body": "@service ${1};" },
+  "Rendering Test (file)": {
+    "isFileTemplate": true,
+    "prefix": ["g-rendering-test", "Rendering Test", "test"],
+    "body": [
+      "import { module, test } from 'qunit';",
+      "import { setupRenderingTest } from 'ember-qunit';",
+      "import { render } from '@ember/test-helpers';",
+      "import { tracked } from '@glimmer/tracking';",
+      "",
+      "module('Rendering | ${1}', function (hooks) {",
+      "  setupRenderingTest(hooks);",
+      "",
+      "  test('${2}', async function (assert) {",
+      "    class State {",
+      "      @tracked where = 'here';",
+      "    }",
+      "",
+      "    let state = new State();",
+      "",
+      "    await render(",
+      "      <template>",
+      "        content to test {{state.where}}",
+      "      </template>",
+      "    );",
+      "",
+      "    assert.dom().hasText('content to test here');",
+      "  });",
+      "});"
+    ]
+  }
+}

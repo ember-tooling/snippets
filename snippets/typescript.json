@@ -1,0 +1,96 @@
+{
+  "Route (file)": {
+    "isFileTemplate": true,
+    "prefix": ["g-route"],
+    "body": [
+      "import Route from '@ember/routing/route';",
+      "import type Transition from '@ember/routing/transition';",
+      "",
+      "interface Params {",
+      "  // FIXME: Add params",
+      "}",
+      "",
+      "export default class ${0} extends Route {",
+      "  queryParams = {",
+      "    // foo: { refreshModel: true } ",
+      "  }",
+      "",
+      "  async beforeModel(transition: Transition) {}",
+      "  async model(params: Params, transition: Transition) {}",
+      "  async afterModel(/* model, transition */) {}",
+      "}"
+    ]
+  },
+  "Route w/ Router (file)": {
+    "isFileTemplate": true,
+    "prefix": ["g-route"],
+    "body": [
+      "import Route from '@ember/routing/route';",
+      "import { service } from '@ember/service';",
+      "import type Transition from '@ember/routing/transition';",
+      "import type RouterService from '@ember/routing/router-service';",
+      "",
+      "interface Params {",
+      "  // FIXME: Add params",
+      "}",
+      "",
+      "export default class ${0} extends Route {",
+      "  @service declare router: RouterService;",
+      "",
+      "  queryParams = {",
+      "    // foo: { refreshModel: true } ",
+      "  }",
+      "",
+      "  async beforeModel(transition: Transition) {}",
+      "  async model(params: Params, transition: Transition) {}",
+      "  async afterModel(/* model, transition */) {}",
+      "}"
+    ]
+  },
+  "Service (file)": {
+    "isFileTemplate": true,
+    "prefix": ["g-service"],
+    "body": [
+      "import Service from '@ember/service';",
+      "",
+      "export default class ${0} extends Service {",
+      "  ${1}",
+      "}"
+    ]
+  },
+  "Unit Test (file)": {
+    "isFileTemplate": true,
+    "prefix": ["g-unit-test", "Unit Test", "test"],
+    "body": [
+      "import { module, test } from 'qunit';",
+      "import { setupTest } from 'ember-qunit';",
+      "",
+      "module('Unit | ${1}', function (hooks) {",
+      "  setupTest(hooks);",
+      "",
+      "  test('${2}', async function (assert) {",
+      "    assert.ok('true', 'we did it');",
+      "  });",
+      "});"
+    ]
+  },
+  "Application Test (file)": {
+    "isFileTemplate": true,
+    "prefix": ["g-application-test", "Application Test", "test"],
+    "body": [
+      "import { module, test } from 'qunit';",
+      "import { setupApplicationTest } from 'ember-qunit';",
+      "import { visit } from '@ember/test-helpers';",
+      "",
+      "module('Application | ${1}', function (hooks) {",
+      "  setupApplicationTest(hooks);",
+      "",
+      "  test('${2}', async function (assert) {",
+      "    await visit('/some/location');",
+      "",
+      "    assert.dom().hasText('content to test here');",
+      "  });",
+      "});"
+    ]
+  }
+}

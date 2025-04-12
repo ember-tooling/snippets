@@ -1,0 +1,22 @@
+{
+  "QUnit Module": {
+    "prefix": ["module"],
+    "body": ["module('${1}', function (hooks) {", "  ${2}", "});"]
+  },
+  "QUnit Test": {
+    "prefix": ["test"],
+    "body": ["test('${1}', async function (assert) {", "  ${2}", "});"]
+  },
+  "@cached getter": {
+    "prefix": ["get", "@cached"],
+    "body": ["@cached", "get ${1}() {", "  ${2}", "}"]
+  },
+  "getter": {
+    "prefix": ["get"],
+    "body": ["get ${1}() {", "  ${2}", "}"]
+  },
+  "getter + setter pair": {
+    "prefix": ["get", "set"],
+    "body": ["get ${1}() {", "  ${2}", "}", "set ${1}(value) {", "  ${3}", "}"]
+  }
+}

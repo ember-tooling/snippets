@@ -1,0 +1,94 @@
+{
+  "name": "ember-snippets",
+  "publisher": "EmberTooling",
+  "displayName": "Ember Polaris Snippets - gjs, gts, tests, services, etc",
+  "description": "Snippets for Ember projects for quickly generating boilerplate",
+  "icon": "images/ember-e-circle-icon-4c.png",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ember-tooling/snippets.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ember-tooling/snippets/issues"
+  },
+  "homepage": "https://github.com/ember-tooling/snippets#readme",
+  "version": "0.0.0",
+  "categories": [
+    "Snippets"
+  ],
+  "engines": {
+    "vscode": ">=1.0.0"
+  },
+  "keywords": [
+    "Ember",
+    "TypeScript",
+    "JavaScript",
+    "Snippets",
+    "Polaris",
+    "Tests",
+    "Testing",
+    "Services",
+    "Boilerplate",
+    "HTML"
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "language": [
+          "Glimmer JS",
+          "javascript.glimmer",
+          "Glimmer TS",
+          "typescript.glimmer",
+          "javascript",
+          "typescript"
+        ],
+        "path": "./snippets/all.json"
+      },
+      {
+        "language": [
+          "Glimmer JS",
+          "javascript.glimmer",
+          "Glimmer TS",
+          "typescript.glimmer"
+        ],
+        "path": "./snippets/all-template-tag.json"
+      },
+      {
+        "language": [
+          "Glimmer JS",
+          "javascript.glimmer"
+        ],
+        "path": "./snippets/javascript.glimmer.json"
+      },
+      {
+        "language": [
+          "Glimmer TS",
+          "typescript.glimmer"
+        ],
+        "path": "./snippets/typescript.glimmer.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/javascript.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/typescript.json"
+      }
+    ]
+  },
+  "scripts": {
+    "lint:fix": "prettier . --write",
+    "build": "vsce pack",
+    "vs:package": "vsce package",
+    "vs:publish": "vsce publish",
+    "vs:publish:ci": "vsce publish --pat $VSCODE_TOKEN",
+    "ov:publish:ci": "ovsx publish --pat $OPENVSX_TOKEN"
+  },
+  "devDependencies": {
+    "@vscode/vsce": "^3.3.2",
+    "ovsx": "^0.10.1",
+    "prettier": "^3.5.3"
+  }
+}
