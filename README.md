@@ -6,6 +6,14 @@
 
 Preconfigured snippets for ember projects following Polaris Patterns.
 
+## Installation
+
+- VSCode: https://marketplace.visualstudio.com/items?itemName=EmberTooling.emberjs-snippets
+- Open VSX: https://open-vsx.org/extension/embertooling/emberjs-snippets
+- (neo)vim:
+    - packer.nvim: `use { "ember-tooling/snippets" }`
+
+
 ## Important
 
 This extension is optimized for developers that use Ember Polaris patterns and features, which are supported back to ember-source 3.28.
