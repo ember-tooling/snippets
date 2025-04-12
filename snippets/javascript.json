@@ -1,4 +1,52 @@
 {
+  "Route (file)": {
+    "isFileTemplate": true,
+    "prefix": ["g-route"],
+    "body": [
+      "import Route from '@ember/routing/route';",
+      "",
+      "export default class ${0} extends Router {",
+      "  queryParams = {",
+      "    // foo: { refreshModel: true } ",
+      "  }",
+      "",
+      "  async beforeModel(/* transition */) {}",
+      "  async model(/* params, transition */) {}",
+      "  async afterModel(/* model, transition */) {}",
+      "}"
+    ]
+  },
+  "Route w/ Router (file)": {
+    "isFileTemplate": true,
+    "prefix": ["g-route"],
+    "body": [
+      "import Route from '@ember/routing/route';",
+      "import { service } from '@ember/service';",
+      "",
+      "export default class ${0} extends Router {",
+      "  @service router;",
+      "",
+      "  queryParams = {",
+      "    // foo: { refreshModel: true } ",
+      "  }",
+      "",
+      "  async beforeModel(/* transition */) {}",
+      "  async model(/* params, transition */) {}",
+      "  async afterModel(/* model, transition */) {}",
+      "}"
+    ]
+  },
+  "Service (file)": {
+    "isFileTemplate": true,
+    "prefix": ["g-route"],
+    "body": [
+      "import Service from '@ember/service';",
+      "",
+      "export default class ${0} extends Service {",
+      "  ${1}",
+      "}"
+    ]
+  },
   "Unit Test (file)": {
     "isFileTemplate": true,
     "prefix": ["g-unit-test", "Unit Test", "test"],

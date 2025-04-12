@@ -1,4 +1,63 @@
 {
+  "Route (file)": {
+    "isFileTemplate": true,
+    "prefix": ["g-route"],
+    "body": [
+      "import Route from '@ember/routing/route';",
+      "import type Transition from '@ember/routing/transition';",
+      "",
+      "interface Params {",
+      "  // FIXME: Add params",
+      "}",
+      "",
+      "export default class ${0} extends Router {",
+      "  queryParams = {",
+      "    // foo: { refreshModel: true } ",
+      "  }",
+      "",
+      "  async beforeModel(transition: Transition) {}",
+      "  async model(params: Params, transition: Transition) {}",
+      "  async afterModel(/* model, transition */) {}",
+      "}"
+    ]
+  },
+  "Route w/ Router (file)": {
+    "isFileTemplate": true,
+    "prefix": ["g-route"],
+    "body": [
+      "import Route from '@ember/routing/route';",
+      "import { service } from '@ember/service';",
+      "import type Transition from '@ember/routing/transition';",
+      "import type RouterService from '@ember/routing/router-service';",
+      "",
+      "interface Params {",
+      "  // FIXME: Add params",
+      "}",
+      "",
+      "export default class ${0} extends Router {",
+      "  @service declare router: RouterService;",
+      "",
+      "  queryParams = {",
+      "    // foo: { refreshModel: true } ",
+      "  }",
+      "",
+      "  async beforeModel(transition: Transition) {}",
+      "  async model(params: Params, transition: Transition) {}",
+      "  async afterModel(/* model, transition */) {}",
+      "}"
+    ]
+  },
+  "Service (file)": {
+    "isFileTemplate": true,
+    "prefix": ["g-route"],
+    "body": [
+      "import Service from '@ember/service';",
+      "",
+      "export default class ${0} extends Service {",
+      "  ${1}",
+      "}"
+    ]
+  },
   "Unit Test (file)": {
     "isFileTemplate": true,
     "prefix": ["g-unit-test", "Unit Test", "test"],

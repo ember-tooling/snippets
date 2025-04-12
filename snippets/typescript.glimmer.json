@@ -1,5 +1,6 @@
 {
   "class Component (file)": {
+    "isFileTemplate": true,
     "prefix": ["g-class-component", "g-component", "class"],
     "body": [
       "import Component from '@glimmer/component';",
@@ -21,6 +22,7 @@
   },
 
   "template-only component (file)": {
+    "isFileTemplate": true,
     "prefix": ["g-component", "const", "temp", "<template>"],
     "body": [
       "import type { TOC } from '@ember/component/template-only';",
@@ -34,6 +36,7 @@
     ]
   },
   "route template(file)": {
+    "isFileTemplate": true,
     "prefix": ["g-template", "const", "temp", "<template>"],
     "body": [
       "import type { TOC } from '@ember/component/template-only';",

@@ -23,6 +23,9 @@ For example,
 
 Whole file generating boilerplate, such as for tests are prefixed with `g-` for generate, similar to the ember-cil command's you'd use in the terminal to generate the same file contents.
 
-- `g-rendering-test`
-- `g-class-component`
+- `g-rendering-test`, `g-application-test`, `g-unit-test`
+- `g-class-component`, `g-component`
+- `g-route`
+- `g-route-template`
+- `g-service`
 - etc
