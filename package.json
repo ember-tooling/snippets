@@ -18,7 +18,8 @@
     "Snippets"
   ],
   "engines": {
-    "vscode": ">=1.0.0"
+    "vscode": ">=1.0.0",
+    "node": ">=20"
   },
   "keywords": [
     "Ember",
@@ -86,6 +87,7 @@
     "vs:publish:ci": "vsce publish --pat $VSCODE_TOKEN",
     "ov:publish:ci": "ovsx publish --pat $OPENVSX_TOKEN"
   },
+  "packageManager": "pnpm@10.7.1",
   "devDependencies": {
     "@vscode/vsce": "^3.3.2",
     "ovsx": "^0.10.1",
