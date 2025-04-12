@@ -1,5 +1,5 @@
 {
-  "name": "ember-snippets",
+  "name": "emberjs-snippets",
   "publisher": "EmberTooling",
   "displayName": "Ember Polaris Snippets - gjs, gts, tests, services, etc",
   "description": "Snippets for Ember projects for quickly generating boilerplate",
