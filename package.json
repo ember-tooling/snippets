@@ -36,37 +36,59 @@
   "contributes": {
     "snippets": [
       {
-        "language": [
-          "Glimmer JS",
-          "javascript.glimmer",
-          "Glimmer TS",
-          "typescript.glimmer",
-          "javascript",
-          "typescript"
-        ],
+        "language": "glimmer-js",
         "path": "./snippets/all.json"
       },
       {
-        "language": [
-          "Glimmer JS",
-          "javascript.glimmer",
-          "Glimmer TS",
-          "typescript.glimmer"
-        ],
+        "language": "javascript.glimmer",
+        "path": "./snippets/all.json"
+      },
+      {
+        "language": "glimmer-ts",
+        "path": "./snippets/all.json"
+      },
+      {
+        "language": "typescript.glimmer",
+        "path": "./snippets/all.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/all.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/all.json"
+      },
+      {
+        "language": "glimmer-js",
         "path": "./snippets/all-template-tag.json"
       },
       {
-        "language": [
-          "Glimmer JS",
-          "javascript.glimmer"
-        ],
+        "language": "javascript.glimmer",
+        "path": "./snippets/all-template-tag.json"
+      },
+      {
+        "language": "glimmer-ts",
+        "path": "./snippets/all-template-tag.json"
+      },
+      {
+        "language": "typescript.glimmer",
+        "path": "./snippets/all-template-tag.json"
+      },
+      {
+        "language": "glimmer-js",
         "path": "./snippets/javascript.glimmer.json"
       },
       {
-        "language": [
-          "Glimmer TS",
-          "typescript.glimmer"
-        ],
+        "language": "javascript.glimmer",
+        "path": "./snippets/javascript.glimmer.json"
+      },
+      {
+        "language": "glimmer-ts",
+        "path": "./snippets/typescript.glimmer.json"
+      },
+      {
+        "language": "typescript.glimmer",
         "path": "./snippets/typescript.glimmer.json"
       },
       {
@@ -85,7 +107,8 @@
     "vs:package": "vsce package",
     "vs:publish": "vsce publish",
     "vs:publish:ci": "vsce publish --pat $VSCODE_TOKEN",
-    "ov:publish:ci": "ovsx publish --pat $OPENVSX_TOKEN"
+    "ov:publish:ci": "ovsx publish --pat $OPENVSX_TOKEN",
+    "generate": "node generate.mjs"
   },
   "packageManager": "pnpm@10.7.1",
   "devDependencies": {
