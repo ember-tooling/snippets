@@ -38,8 +38,10 @@
       {
         "language": [
           "Glimmer JS",
+          "glimmer-js",
           "javascript.glimmer",
           "Glimmer TS",
+          "glimmer-ts",
           "typescript.glimmer",
           "javascript",
           "typescript"
@@ -49,8 +51,10 @@
       {
         "language": [
           "Glimmer JS",
+          "glimmer-js",
           "javascript.glimmer",
           "Glimmer TS",
+          "glimmer-ts",
           "typescript.glimmer"
         ],
         "path": "./snippets/all-template-tag.json"
@@ -58,6 +62,7 @@
       {
         "language": [
           "Glimmer JS",
+          "glimmer-js",
           "javascript.glimmer"
         ],
         "path": "./snippets/javascript.glimmer.json"
@@ -65,6 +70,7 @@
       {
         "language": [
           "Glimmer TS",
+          "glimmer-ts",
           "typescript.glimmer"
         ],
         "path": "./snippets/typescript.glimmer.json"
