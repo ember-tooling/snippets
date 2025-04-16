@@ -34,7 +34,7 @@ Whole file generating boilerplate, such as for tests are prefixed with `g-` for 
 - `g-rendering-test`, `g-application-test`, `g-unit-test`
 - `g-class-component`, `g-component`
 - `g-route`
-- `g-route-template`
+- `g-template`
 - `g-service`
 - etc
 
