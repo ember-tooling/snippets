@@ -36,7 +36,7 @@
   "contributes": {
     "snippets": [
       {
-        "language": "glimmer-js",
+        "language": "javascript",
         "path": "./snippets/all.json"
       },
       {
@@ -44,7 +44,7 @@
         "path": "./snippets/all.json"
       },
       {
-        "language": "glimmer-ts",
+        "language": "typescript",
         "path": "./snippets/all.json"
       },
       {
@@ -53,14 +53,6 @@
       },
       {
         "language": "javascript",
-        "path": "./snippets/all.json"
-      },
-      {
-        "language": "typescript",
-        "path": "./snippets/all.json"
-      },
-      {
-        "language": "glimmer-js",
         "path": "./snippets/all-template-tag.json"
       },
       {
@@ -68,7 +60,7 @@
         "path": "./snippets/all-template-tag.json"
       },
       {
-        "language": "glimmer-ts",
+        "language": "typescript",
         "path": "./snippets/all-template-tag.json"
       },
       {
@@ -76,7 +68,7 @@
         "path": "./snippets/all-template-tag.json"
       },
       {
-        "language": "glimmer-js",
+        "language": "javascript",
         "path": "./snippets/javascript.glimmer.json"
       },
       {
@@ -84,7 +76,7 @@
         "path": "./snippets/javascript.glimmer.json"
       },
       {
-        "language": "glimmer-ts",
+        "language": "typescript",
         "path": "./snippets/typescript.glimmer.json"
       },
       {

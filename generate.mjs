@@ -6,12 +6,20 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const packageJsonPath = path.join(__dirname, "package.json");
 const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, "utf8"));
 
-const glimmerTS = ["glimmer-ts", "typescript.glimmer"];
-const glimmerJS = ["glimmer-js", "javascript.glimmer"];
+const glimmerTS = ["typescript", "typescript.glimmer"];
+const glimmerJS = ["javascript", "javascript.glimmer"];
 const glimmer = [...glimmerJS, ...glimmerTS];
 const javascript = ["javascript"];
 const typescript = ["typescript"];
-const allLanguages = [...glimmer, ...javascript, ...typescript];
+const allLanguages = [...glimmer, ...javascript, ...typescript].reduce(
+  (acc, language) => {
+    if (!acc.includes(language)) {
+      acc.push(language);
+    }
+    return acc;
+  },
+  [],
+);
 
 function newSnippet(language, path) {
   return {
